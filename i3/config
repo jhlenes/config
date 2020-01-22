@@ -183,3 +183,6 @@ bar {
 # Moving workspaces between screens
 bindsym $mod+p move workspace to output right
 
+# Automatically detect screen resolution
+exec_always --no-startup-id autorandr --change
+

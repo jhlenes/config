@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Set background with feh
+eval `cat ~/.fehbg`
