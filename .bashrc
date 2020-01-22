@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=-1
+HISTFILESIZE=-1
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -119,7 +119,8 @@ fi
 # ROS setup
 source /opt/ros/melodic/setup.bash
 #source ~/cartographer_ws/install_isolated/setup.bash
-source ~/dev/catkin_ws/devel/setup.bash
+#source ~/dev/catkin_ws/devel/setup.bash
+source ~/dev/autonomy_ws/devel/setup.bash
 
 # ccache setup
 export CCACHE_DIR="$HOME/.cache/ccache"
@@ -131,3 +132,10 @@ export PATH="/usr/lib/ccache:$PATH"
 # YCM-generator alias
 alias ygc='PATH=/bin:/usr/bin ~/.vim/bundle/YCM-Generator/config_gen.py' 
 
+# https://github.com/nvbn/thefuck
+eval "$(thefuck --alias)"
+
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# Set background with feh
+eval `cat ~/.fehbg`
