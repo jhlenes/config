@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Written on tir. jun. 9 13:14:40 2020 by Qt Creator 4.12.2-->
+<externaltool id="qmlscene">
+    <description>Runs the current QML file with qmlscene. This requires Qt 5.</description>
+    <displayname>Qt Quick 2 Preview (qmlscene)</displayname>
+    <category>Qt Quick</category>
+    <order>1</order>
+    <executable output="showinpane" error="showinpane" modifiesdocument="no">
+        <path>/usr/bin/qmlscene</path>
+        <path>qmlscene</path>
+        <arguments>%{CurrentDocument:FilePath}</arguments>
+        <workingdirectory>%{CurrentDocument:Path}</workingdirectory>
+        <environment>QT_LOGGING_TO_CONSOLE%3D1</environment>
+    </executable>
+</externaltool>

@@ -37,7 +37,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-# Screeb brightness controls
+# Screen brightness controls
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 
@@ -89,6 +89,9 @@ bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
+
+# global fullscreen: across all monitors
+bindsym $mod+shift+f fullscreen toggle global
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -198,6 +201,6 @@ bindsym $mod+Shift+l exec systemctl suspend
 
 # Make vcs floating (use .bin/scripts/i3-get-window-criteria to find class)
 for_window [class="VCS"] floating enable
-
 for_window [class="rviz"] floating enable
-
+for_window [class="targeteye"] floating enable
+for_window [class="replay"] floating enable
